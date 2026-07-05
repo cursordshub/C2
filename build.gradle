@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+    id 'info.solidsoft.pitest' version '1.19.0'
+}
+
+group = 'com.toolchain'
+version = '0.1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Source AST + cross-module symbol resolution.
+    implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.26.2'
+    // Bytecode/binary scanning for compiled-only dependencies.
+    implementation 'org.ow2.asm:asm:9.7'
+    // Structured JSON output keyed by FQN.
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
+
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'com.toolchain.metadata.cli.MetadataCli'
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+pitest {
+    junit5PluginVersion = '1.2.1'
+    targetClasses = ['com.toolchain.metadata.*']
+    outputFormats = ['XML', 'HTML']
+}
