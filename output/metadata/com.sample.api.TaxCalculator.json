@@ -1,0 +1,59 @@
+{
+  "fqn" : "com.sample.api.TaxCalculator",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "BillingContext", "String" ],
+  "dependencyUsage" : {
+    "BigDecimal" : 20,
+    "BillingContext" : 3,
+    "String" : 5
+  },
+  "methods" : [ {
+    "name" : "computeTax",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext" ],
+    "access" : "package-private"
+  }, {
+    "name" : "computeRegionalSurcharge",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "computeImportDuty",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isRegionTaxExempt",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidTaxableAmount",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "computeTaxIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext" ],
+    "access" : "package-private"
+  }, {
+    "name" : "computeRegionalSurchargeIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "computeImportDutyIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "totalTaxWithSurcharge",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

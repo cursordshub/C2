@@ -1,0 +1,100 @@
+{
+  "fqn" : "com.sample.fulfillment.AllocationResult",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "ShippingPriority", "String" ],
+  "dependencyUsage" : {
+    "String" : 7,
+    "ShippingPriority" : 3
+  },
+  "methods" : [ {
+    "name" : "warehouseId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "sku",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "allocatedQuantity",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "leadDays",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "priority",
+    "returnType" : "ShippingPriority",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "partial",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isComplete",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "int" ],
+    "access" : "public"
+  }, {
+    "name" : "hasWarehouse",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasAllocation",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "shortfall",
+    "returnType" : "int",
+    "parameterTypes" : [ "int" ],
+    "access" : "public"
+  }, {
+    "name" : "isExpedited",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "diagnosticLabel",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "warehouseId",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "sku",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "allocatedQuantity",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "leadDays",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "priority",
+    "type" : "ShippingPriority",
+    "access" : "private"
+  }, {
+    "name" : "partial",
+    "type" : "boolean",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String", "int", "int", "ShippingPriority", "boolean" ],
+    "access" : "package-private"
+  } ]
+}

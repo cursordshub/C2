@@ -1,0 +1,68 @@
+{
+  "fqn" : "com.sample.api.ProductCatalog",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "String" ],
+  "dependencyUsage" : {
+    "String" : 14,
+    "BigDecimal" : 7
+  },
+  "methods" : [ {
+    "name" : "getBasePrice",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "getBulkPrice",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isActiveSku",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "resolveCategory",
+    "returnType" : "String",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidSku",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isPositiveQuantity",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "safeBasePrice",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "priceForQuantity",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isPurchasable",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "resolveCategoryOrDefault",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "lineTotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

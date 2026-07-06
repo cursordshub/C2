@@ -1,0 +1,68 @@
+{
+  "fqn" : "com.sample.catalog.PricingService",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : true,
+  "dependencies" : [ "Customer", "IllegalArgumentException", "String" ],
+  "dependencyUsage" : {
+    "String" : 4,
+    "Customer" : 1,
+    "IllegalArgumentException" : 2
+  },
+  "methods" : [ {
+    "name" : "priceFor",
+    "returnType" : "double",
+    "parameterTypes" : [ "Customer", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "taxRate",
+    "returnType" : "double",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "priceListVersion",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "estimateLineTotal",
+    "returnType" : "double",
+    "parameterTypes" : [ "int" ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "TAX_RATE",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "baseUnitPrice",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "vipDiscountRate",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "bulkThreshold",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "bulkDiscountRate",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "roundToCents",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "priceListVersion",
+    "type" : "String",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "parameterTypes" : [ "double", "double", "double", "double", "boolean", "String" ],
+    "access" : "package-private"
+  } ]
+}

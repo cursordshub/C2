@@ -1,0 +1,489 @@
+# Human-readable internal dependency graph (not consumed by the toolchain).
+# Dependencies filtered by package prefix; ordered by usage within each class (most -> least).
+internal_packages:
+  - com.sample
+
+com.sample.api.AuditLogger:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.CurrencyConverter:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.DiscountPolicy:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 11
+
+com.sample.api.IdGenerator:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.InventoryStore:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.LegacyAccount:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.NotificationSender:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.OrderRepository:
+  out_degree: 3
+  dependencies:
+    - fqn: com.sample.billing.CommercialInvoiceDraft
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 5
+    - fqn: com.sample.catalog.Order
+      used_by_dependent: 2
+      out_degree: 4
+      in_degree: 2
+    - fqn: com.sample.fulfillment.OrderFulfillmentContext
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 5
+
+com.sample.api.PaymentGateway:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.PaymentStatus:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.ProductCatalog:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.ShippingPriority:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.api.ShippingRateTable:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 8
+
+com.sample.api.TaxCalculator:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 11
+
+com.sample.billing.BillingContext:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.billing.CheckoutResult:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.billing.CheckoutService:
+  out_degree: 12
+  dependencies:
+    - fqn: com.sample.billing.CheckoutResult
+      used_by_dependent: 4
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.api.AuditLogger
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.InventoryStore
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.LegacyAccount
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 1
+    - fqn: com.sample.api.NotificationSender
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.PaymentGateway
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 8
+    - fqn: com.sample.api.ShippingRateTable
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 3
+    - fqn: com.sample.api.TaxCalculator
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 4
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.billing.PricingEngine
+      used_by_dependent: 2
+      out_degree: 7
+      in_degree: 1
+    - fqn: com.sample.fulfillment.WarehouseAllocator
+      used_by_dependent: 2
+      out_degree: 3
+      in_degree: 2
+
+com.sample.billing.CommercialInvoiceDraft:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.billing.PaymentSettlementEngine:
+  out_degree: 16
+  dependencies:
+    - fqn: com.sample.billing.CommercialInvoiceDraft
+      used_by_dependent: 6
+      out_degree: 0
+      in_degree: 5
+    - fqn: com.sample.billing.CheckoutResult
+      used_by_dependent: 5
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 4
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.api.AuditLogger
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.CurrencyConverter
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.api.DiscountPolicy
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 2
+    - fqn: com.sample.api.InventoryStore
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.NotificationSender
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.OrderRepository
+      used_by_dependent: 2
+      out_degree: 3
+      in_degree: 2
+    - fqn: com.sample.api.PaymentGateway
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.api.ProductCatalog
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 4
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 8
+    - fqn: com.sample.api.ShippingRateTable
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 3
+    - fqn: com.sample.api.TaxCalculator
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 4
+    - fqn: com.sample.catalog.CustomerAccountProfile
+      used_by_dependent: 1
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.fulfillment.OrderFulfillmentContext
+      used_by_dependent: 1
+      out_degree: 1
+      in_degree: 5
+
+com.sample.billing.PricingEngine:
+  out_degree: 7
+  dependencies:
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 10
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.billing.PricingEngine.AbstractPricingRule
+      used_by_dependent: 5
+      out_degree: 1
+      in_degree: 3
+    - fqn: com.sample.api.CurrencyConverter
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.api.DiscountPolicy
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 2
+    - fqn: com.sample.api.ProductCatalog
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 4
+    - fqn: com.sample.billing.PricingEngine.PremiumPricingRule
+      used_by_dependent: 1
+      out_degree: 2
+      in_degree: 1
+    - fqn: com.sample.billing.PricingEngine.StandardPricingRule
+      used_by_dependent: 1
+      out_degree: 2
+      in_degree: 1
+
+com.sample.billing.PricingEngine.AbstractPricingRule:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 1
+      out_degree: 0
+      in_degree: 11
+
+com.sample.billing.PricingEngine.PremiumPricingRule:
+  out_degree: 2
+  dependencies:
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 1
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.billing.PricingEngine.AbstractPricingRule
+      used_by_dependent: 1
+      out_degree: 1
+      in_degree: 3
+
+com.sample.billing.PricingEngine.StandardPricingRule:
+  out_degree: 2
+  dependencies:
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 1
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.billing.PricingEngine.AbstractPricingRule
+      used_by_dependent: 1
+      out_degree: 1
+      in_degree: 3
+
+com.sample.catalog.CatalogBrowseService:
+  out_degree: 10
+  dependencies:
+    - fqn: com.sample.catalog.Customer
+      used_by_dependent: 4
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.billing.CommercialInvoiceDraft
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 5
+    - fqn: com.sample.catalog.CustomerAccountProfile
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 2
+    - fqn: com.sample.catalog.Order
+      used_by_dependent: 3
+      out_degree: 4
+      in_degree: 2
+    - fqn: com.sample.api.ProductCatalog
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 4
+    - fqn: com.sample.api.TaxCalculator
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 4
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.catalog.PricingService
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 2
+    - fqn: com.sample.fulfillment.OrderFulfillmentContext
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 5
+    - fqn: com.sample.fulfillment.FulfillmentCoordinator
+      used_by_dependent: 1
+      out_degree: 12
+      in_degree: 1
+
+com.sample.catalog.Customer:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.catalog.CustomerAccountProfile:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.catalog.Order:
+  out_degree: 4
+  dependencies:
+    - fqn: com.sample.catalog.Customer
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.catalog.PricingService
+      used_by_dependent: 3
+      out_degree: 1
+      in_degree: 2
+    - fqn: com.sample.api.OrderRepository
+      used_by_dependent: 1
+      out_degree: 3
+      in_degree: 2
+    - fqn: com.sample.billing.CommercialInvoiceDraft
+      used_by_dependent: 1
+      out_degree: 0
+      in_degree: 5
+
+com.sample.catalog.PaymentStatus:
+  out_degree: 0
+  dependencies:
+    []
+
+com.sample.catalog.PricingService:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.catalog.Customer
+      used_by_dependent: 1
+      out_degree: 0
+      in_degree: 3
+
+com.sample.fulfillment.AllocationResult:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 8
+
+com.sample.fulfillment.FulfillmentCoordinator:
+  out_degree: 12
+  dependencies:
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 7
+      out_degree: 0
+      in_degree: 8
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 5
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.billing.CommercialInvoiceDraft
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 5
+    - fqn: com.sample.api.AuditLogger
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.InventoryStore
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.NotificationSender
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 3
+    - fqn: com.sample.api.ProductCatalog
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 4
+    - fqn: com.sample.api.ShippingRateTable
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 3
+    - fqn: com.sample.api.TaxCalculator
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 4
+    - fqn: com.sample.fulfillment.AllocationResult
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 2
+    - fqn: com.sample.fulfillment.OrderFulfillmentContext
+      used_by_dependent: 2
+      out_degree: 1
+      in_degree: 5
+    - fqn: com.sample.fulfillment.WarehouseAllocator
+      used_by_dependent: 2
+      out_degree: 3
+      in_degree: 2
+
+com.sample.fulfillment.OrderFulfillmentContext:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 1
+      out_degree: 0
+      in_degree: 8
+
+com.sample.fulfillment.ShipmentRoutingEngine:
+  out_degree: 3
+  dependencies:
+    - fqn: com.sample.fulfillment.WarehouseDispatchRequest
+      used_by_dependent: 3
+      out_degree: 1
+      in_degree: 2
+    - fqn: com.sample.billing.BillingContext
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 11
+    - fqn: com.sample.fulfillment.OrderFulfillmentContext
+      used_by_dependent: 1
+      out_degree: 1
+      in_degree: 5
+
+com.sample.fulfillment.WarehouseAllocator:
+  out_degree: 3
+  dependencies:
+    - fqn: com.sample.fulfillment.AllocationResult
+      used_by_dependent: 6
+      out_degree: 1
+      in_degree: 2
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 2
+      out_degree: 0
+      in_degree: 8
+    - fqn: com.sample.fulfillment.WarehouseDispatchRequest
+      used_by_dependent: 1
+      out_degree: 1
+      in_degree: 2
+
+com.sample.fulfillment.WarehouseDispatchRequest:
+  out_degree: 1
+  dependencies:
+    - fqn: com.sample.api.ShippingPriority
+      used_by_dependent: 3
+      out_degree: 0
+      in_degree: 8
+

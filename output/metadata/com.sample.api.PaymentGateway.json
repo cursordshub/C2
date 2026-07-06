@@ -1,0 +1,69 @@
+{
+  "fqn" : "com.sample.api.PaymentGateway",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "PaymentStatus", "String" ],
+  "dependencyUsage" : {
+    "String" : 11,
+    "BigDecimal" : 11,
+    "PaymentStatus" : 2
+  },
+  "methods" : [ {
+    "name" : "charge",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "verifyFunds",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "capture",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "refund",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidAccountToken",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isChargeableAmount",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "verifyFundsIfValid",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "chargeIfValid",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "captureIfValid",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "refundIfValid",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "normalizeChargeAmount",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

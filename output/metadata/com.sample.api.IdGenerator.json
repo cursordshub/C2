@@ -1,0 +1,92 @@
+{
+  "fqn" : "com.sample.api.IdGenerator",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "AtomicLong", "NumberFormatException", "String" ],
+  "dependencyUsage" : {
+    "AtomicLong" : 4,
+    "String" : 13,
+    "NumberFormatException" : 1
+  },
+  "methods" : [ {
+    "name" : "nextOrderId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "nextTransactionId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "nextSettlementReference",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isOrderId",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "isTransactionId",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "isSettlementReference",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "parseOrderSequence",
+    "returnType" : "long",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "parseTransactionSequence",
+    "returnType" : "long",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "parseSequence",
+    "returnType" : "long",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "private"
+  }, {
+    "name" : "currentOrderSequence",
+    "returnType" : "long",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "currentTransactionSequence",
+    "returnType" : "long",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "ORDER_SEQ",
+    "type" : "AtomicLong",
+    "access" : "private"
+  }, {
+    "name" : "TXN_SEQ",
+    "type" : "AtomicLong",
+    "access" : "private"
+  }, {
+    "name" : "ORDER_PREFIX",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "TXN_PREFIX",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "SETTLEMENT_PREFIX",
+    "type" : "String",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ]
+}

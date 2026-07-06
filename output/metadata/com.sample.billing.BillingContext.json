@@ -1,0 +1,89 @@
+{
+  "fqn" : "com.sample.billing.BillingContext",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "String" ],
+  "dependencyUsage" : {
+    "String" : 9
+  },
+  "methods" : [ {
+    "name" : "currencyCode",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "allowsExpressBilling",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasRegion",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasSalesChannel",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "cartTotalMajorUnits",
+    "returnType" : "double",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasItems",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "qualifiesForBulkPricing",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "normalizedRegionCode",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "diagnosticLabel",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "requiresExpressHandling",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "regionCode",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "currencyCode",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "itemQuantity",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "cartTotalCents",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "expressRequested",
+    "type" : "boolean",
+    "access" : "public"
+  }, {
+    "name" : "salesChannel",
+    "type" : "String",
+    "access" : "public"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String", "int", "int", "boolean", "String" ],
+    "access" : "public"
+  } ]
+}

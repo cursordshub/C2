@@ -1,0 +1,90 @@
+{
+  "fqn" : "com.sample.api.LegacyAccount",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "String" ],
+  "dependencyUsage" : {
+    "String" : 7
+  },
+  "methods" : [ {
+    "name" : "getAccountId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getPublishedScore",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasValidToken",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "qualifiesForExpress",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "internalCreditScore",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "hasAccountId",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "meetsPublishedThreshold",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "creditGapToExpress",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "maskedToken",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isFullyQualifiedForExpress",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "supportSummary",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "EXPRESS_CREDIT_THRESHOLD",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "accountId",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "publishedScore",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "legacyToken",
+    "type" : "String",
+    "access" : "package-private"
+  }, {
+    "name" : "internalCreditScore",
+    "type" : "int",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "int", "String" ],
+    "access" : "public"
+  } ]
+}

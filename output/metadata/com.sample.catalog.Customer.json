@@ -1,0 +1,124 @@
+{
+  "fqn" : "com.sample.catalog.Customer",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "LocalDate", "String" ],
+  "dependencyUsage" : {
+    "String" : 21,
+    "LocalDate" : 3
+  },
+  "methods" : [ {
+    "name" : "getId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getName",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getEmail",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getRegionCode",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getLoyaltyPoints",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isVip",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getMemberSince",
+    "returnType" : "LocalDate",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getPreferredCurrency",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getFailedPaymentCount",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getReferralCode",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "qualifiesForBulkDiscount",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasCleanPaymentHistory",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "displayLabel",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "id",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "name",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "email",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "regionCode",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "loyaltyPoints",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "vip",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "memberSince",
+    "type" : "LocalDate",
+    "access" : "private"
+  }, {
+    "name" : "preferredCurrency",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "failedPaymentCount",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "referralCode",
+    "type" : "String",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "public"
+  }, {
+    "parameterTypes" : [ "String", "String", "String", "String", "int", "boolean", "LocalDate", "String", "int", "String" ],
+    "access" : "public"
+  } ]
+}

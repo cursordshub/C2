@@ -1,0 +1,115 @@
+{
+  "fqn" : "com.sample.catalog.Order",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "CommercialInvoiceDraft", "Customer", "IllegalArgumentException", "IllegalStateException", "OrderRepository", "PaymentStatus", "PricingService", "String" ],
+  "dependencyUsage" : {
+    "String" : 6,
+    "Customer" : 3,
+    "PricingService" : 3,
+    "PaymentStatus" : 2,
+    "IllegalArgumentException" : 1,
+    "IllegalStateException" : 2,
+    "OrderRepository" : 1,
+    "CommercialInvoiceDraft" : 1
+  },
+  "methods" : [ {
+    "name" : "total",
+    "returnType" : "double",
+    "parameterTypes" : [ "int" ],
+    "access" : "public"
+  }, {
+    "name" : "markPaid",
+    "returnType" : "void",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "authorize",
+    "returnType" : "void",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getStatus",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getCustomer",
+    "returnType" : "Customer",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getPricingService",
+    "returnType" : "PricingService",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getLineCount",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getCachedSubtotal",
+    "returnType" : "double",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "setNotes",
+    "returnType" : "void",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "getNotes",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "persistDraft",
+    "returnType" : "void",
+    "parameterTypes" : [ "OrderRepository", "CommercialInvoiceDraft" ],
+    "access" : "public"
+  }, {
+    "name" : "isReadyForFulfillment",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "id",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "customer",
+    "type" : "Customer",
+    "access" : "private"
+  }, {
+    "name" : "pricingService",
+    "type" : "PricingService",
+    "access" : "private"
+  }, {
+    "name" : "status",
+    "type" : "PaymentStatus",
+    "access" : "private"
+  }, {
+    "name" : "lineCount",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "cachedSubtotal",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "notes",
+    "type" : "String",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "Customer", "PricingService" ],
+    "access" : "public"
+  } ]
+}

@@ -1,0 +1,67 @@
+{
+  "fqn" : "com.sample.api.InventoryStore",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "String" ],
+  "dependencyUsage" : {
+    "String" : 10
+  },
+  "methods" : [ {
+    "name" : "reserve",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "availableQuantity",
+    "returnType" : "int",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "release",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isBackorderAllowed",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidSku",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isPositiveQuantity",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "canFulfill",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "reserveIfAvailable",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "releaseIfValid",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "canAcceptOrder",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "remainingAfterReserve",
+    "returnType" : "int",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

@@ -1,0 +1,64 @@
+{
+  "fqn" : "com.sample.catalog.PaymentStatus",
+  "classType" : "ENUM",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "IllegalArgumentException", "String" ],
+  "dependencyUsage" : {
+    "String" : 3,
+    "IllegalArgumentException" : 1
+  },
+  "methods" : [ {
+    "name" : "isTerminal",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isSuccessful",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isPaid",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isCancelled",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isAwaitingPayment",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "fromName",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "displayLabel",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "checkoutOutcome",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "terminal",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "successful",
+    "type" : "boolean",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "boolean", "boolean" ],
+    "access" : "package-private"
+  } ]
+}

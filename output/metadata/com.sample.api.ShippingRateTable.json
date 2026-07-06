@@ -1,0 +1,64 @@
+{
+  "fqn" : "com.sample.api.ShippingRateTable",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "ShippingPriority", "String" ],
+  "dependencyUsage" : {
+    "BigDecimal" : 12,
+    "ShippingPriority" : 3,
+    "String" : 2
+  },
+  "methods" : [ {
+    "name" : "lookupRate",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "double", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "expressMultiplier",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "ShippingPriority" ],
+    "access" : "package-private"
+  }, {
+    "name" : "regionalFlatFee",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "bulkDiscountRate",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidWeight",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "double" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidDistance",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "lookupRateIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "double", "int" ],
+    "access" : "package-private"
+  }, {
+    "name" : "applyPriorityMultiplier",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "ShippingPriority" ],
+    "access" : "package-private"
+  }, {
+    "name" : "regionalFlatFeeOrZero",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "safeBulkDiscountRate",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "int" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

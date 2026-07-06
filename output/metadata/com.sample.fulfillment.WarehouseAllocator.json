@@ -1,0 +1,73 @@
+{
+  "fqn" : "com.sample.fulfillment.WarehouseAllocator",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "AllocationResult", "IllegalArgumentException", "ShippingPriority", "String", "WarehouseDispatchRequest" ],
+  "dependencyUsage" : {
+    "String" : 12,
+    "AllocationResult" : 6,
+    "ShippingPriority" : 2,
+    "WarehouseDispatchRequest" : 1,
+    "IllegalArgumentException" : 2
+  },
+  "methods" : [ {
+    "name" : "allocate",
+    "returnType" : "AllocationResult",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "allocate",
+    "returnType" : "AllocationResult",
+    "parameterTypes" : [ "String", "int", "ShippingPriority" ],
+    "access" : "public"
+  }, {
+    "name" : "allocateFromDispatch",
+    "returnType" : "AllocationResult",
+    "parameterTypes" : [ "WarehouseDispatchRequest" ],
+    "access" : "public"
+  }, {
+    "name" : "allocatePrimaryWarehouse",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "estimatePickMinutes",
+    "returnType" : "int",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "validateRequest",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "private"
+  }, {
+    "name" : "resolveWarehouse",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "private"
+  }, {
+    "name" : "estimateAvailableUnits",
+    "returnType" : "int",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "private"
+  }, {
+    "name" : "estimateLeadDays",
+    "returnType" : "int",
+    "parameterTypes" : [ "String", "ShippingPriority" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ {
+    "name" : "DEFAULT_LEAD_DAYS",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "EXPRESS_LEAD_DAYS",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "OVERNIGHT_LEAD_DAYS",
+    "type" : "int",
+    "access" : "private"
+  } ],
+  "constructors" : [ ]
+}

@@ -1,0 +1,62 @@
+{
+  "fqn" : "com.sample.api.NotificationSender",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "String" ],
+  "dependencyUsage" : {
+    "String" : 19
+  },
+  "methods" : [ {
+    "name" : "sendConfirmation",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "sendFailureAlert",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "sendSettlementNotice",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidRecipient",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidSettlementId",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "sendConfirmationIfValid",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "sendFailureAlertNormalized",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "sendSettlementNoticeIfValid",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "confirmationSubject",
+    "returnType" : "String",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "failureSubject",
+    "returnType" : "String",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

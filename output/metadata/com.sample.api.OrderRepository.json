@@ -1,0 +1,82 @@
+{
+  "fqn" : "com.sample.api.OrderRepository",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "CommercialInvoiceDraft", "List", "Order", "OrderFulfillmentContext", "String" ],
+  "dependencyUsage" : {
+    "Order" : 2,
+    "CommercialInvoiceDraft" : 3,
+    "String" : 12,
+    "List" : 3,
+    "OrderFulfillmentContext" : 2,
+    "BigDecimal" : 3
+  },
+  "methods" : [ {
+    "name" : "save",
+    "returnType" : "void",
+    "parameterTypes" : [ "Order" ],
+    "access" : "package-private"
+  }, {
+    "name" : "saveInvoiceDraft",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "CommercialInvoiceDraft" ],
+    "access" : "package-private"
+  }, {
+    "name" : "findDraftByOrderId",
+    "returnType" : "CommercialInvoiceDraft",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "findOpenOrderIds",
+    "returnType" : "List<String>",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "attachFulfillmentContext",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "OrderFulfillmentContext" ],
+    "access" : "package-private"
+  }, {
+    "name" : "sumOutstandingForAccount",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidOrderId",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidAccountId",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "saveIfPresent",
+    "returnType" : "void",
+    "parameterTypes" : [ "Order" ],
+    "access" : "package-private"
+  }, {
+    "name" : "saveInvoiceDraftIfPresent",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "CommercialInvoiceDraft" ],
+    "access" : "package-private"
+  }, {
+    "name" : "findOpenOrderIdsOrEmpty",
+    "returnType" : "List<String>",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "attachFulfillmentContextIfValid",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "OrderFulfillmentContext" ],
+    "access" : "package-private"
+  }, {
+    "name" : "safeOutstandingForAccount",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

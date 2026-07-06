@@ -1,0 +1,63 @@
+{
+  "fqn" : "com.sample.api.ShippingPriority",
+  "classType" : "ENUM",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "IllegalArgumentException", "String" ],
+  "dependencyUsage" : {
+    "String" : 4,
+    "IllegalArgumentException" : 1
+  },
+  "methods" : [ {
+    "name" : "displayName",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "maxLeadDays",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isExpedited",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "requiresExpressHandling",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "fromCode",
+    "returnType" : "ShippingPriority",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "defaultPriority",
+    "returnType" : "ShippingPriority",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isFasterThan",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "ShippingPriority" ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "displayName",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "maxLeadDays",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "expedited",
+    "type" : "boolean",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "int", "boolean" ],
+    "access" : "package-private"
+  } ]
+}

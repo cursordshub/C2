@@ -1,0 +1,105 @@
+{
+  "fqn" : "com.sample.billing.CommercialInvoiceDraft",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "LocalDate", "String" ],
+  "dependencyUsage" : {
+    "String" : 13,
+    "BigDecimal" : 12,
+    "LocalDate" : 4
+  },
+  "methods" : [ {
+    "name" : "invoiceNumber",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "draftId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "grandTotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasLineItems",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasInvoiceNumber",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "daysUntilDue",
+    "returnType" : "long",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "indexKey",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "safe",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "private"
+  } ],
+  "fields" : [ {
+    "name" : "invoiceNumber",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "buyerName",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "sellerName",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "lineItemCount",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "subtotal",
+    "type" : "BigDecimal",
+    "access" : "public"
+  }, {
+    "name" : "taxAmount",
+    "type" : "BigDecimal",
+    "access" : "public"
+  }, {
+    "name" : "shippingAmount",
+    "type" : "BigDecimal",
+    "access" : "public"
+  }, {
+    "name" : "discountAmount",
+    "type" : "BigDecimal",
+    "access" : "public"
+  }, {
+    "name" : "currencyCode",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "issueDate",
+    "type" : "LocalDate",
+    "access" : "public"
+  }, {
+    "name" : "dueDate",
+    "type" : "LocalDate",
+    "access" : "public"
+  }, {
+    "name" : "paymentTerms",
+    "type" : "String",
+    "access" : "public"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String", "String", "int", "BigDecimal", "BigDecimal", "BigDecimal", "BigDecimal", "String", "LocalDate", "LocalDate", "String" ],
+    "access" : "public"
+  } ]
+}

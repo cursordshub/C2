@@ -1,0 +1,78 @@
+{
+  "fqn" : "com.sample.billing.PricingEngine",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "AbstractPricingRule", "BigDecimal", "BillingContext", "CurrencyConverter", "DiscountPolicy", "PremiumPricingRule", "ProductCatalog", "StandardPricingRule", "String" ],
+  "dependencyUsage" : {
+    "ProductCatalog" : 2,
+    "CurrencyConverter" : 2,
+    "DiscountPolicy" : 2,
+    "AbstractPricingRule" : 5,
+    "StandardPricingRule" : 1,
+    "PremiumPricingRule" : 1,
+    "String" : 8,
+    "BillingContext" : 10,
+    "BigDecimal" : 31
+  },
+  "methods" : [ {
+    "name" : "quoteLineTotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "BillingContext" ],
+    "access" : "public"
+  }, {
+    "name" : "quoteWithFallback",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "BillingContext", "String" ],
+    "access" : "public"
+  }, {
+    "name" : "quotePremiumBundle",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "BillingContext" ],
+    "access" : "public"
+  }, {
+    "name" : "estimateTaxableSubtotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "BillingContext" ],
+    "access" : "public"
+  }, {
+    "name" : "quoteCategoryAdjustedTotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "BillingContext" ],
+    "access" : "public"
+  }, {
+    "name" : "isSkuQuotable",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "BillingContext" ],
+    "access" : "public"
+  }, {
+    "name" : "applyRule",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext", "AbstractPricingRule" ],
+    "access" : "private"
+  } ],
+  "fields" : [ {
+    "name" : "productCatalog",
+    "type" : "ProductCatalog",
+    "access" : "private"
+  }, {
+    "name" : "currencyConverter",
+    "type" : "CurrencyConverter",
+    "access" : "private"
+  }, {
+    "name" : "discountPolicy",
+    "type" : "DiscountPolicy",
+    "access" : "private"
+  }, {
+    "name" : "defaultRule",
+    "type" : "AbstractPricingRule",
+    "access" : "private"
+  }, {
+    "name" : "premiumRule",
+    "type" : "AbstractPricingRule",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "ProductCatalog", "CurrencyConverter", "DiscountPolicy" ],
+    "access" : "public"
+  } ]
+}

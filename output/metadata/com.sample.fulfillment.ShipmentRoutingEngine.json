@@ -1,0 +1,87 @@
+{
+  "fqn" : "com.sample.fulfillment.ShipmentRoutingEngine",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BillingContext", "IllegalArgumentException", "IllegalStateException", "OrderFulfillmentContext", "String", "WarehouseDispatchRequest" ],
+  "dependencyUsage" : {
+    "String" : 16,
+    "WarehouseDispatchRequest" : 3,
+    "OrderFulfillmentContext" : 1,
+    "BillingContext" : 2,
+    "IllegalArgumentException" : 1,
+    "IllegalStateException" : 1
+  },
+  "methods" : [ {
+    "name" : "routeShipment",
+    "returnType" : "String",
+    "parameterTypes" : [ "WarehouseDispatchRequest", "OrderFulfillmentContext", "BillingContext" ],
+    "access" : "public"
+  }, {
+    "name" : "estimateDistance",
+    "returnType" : "int",
+    "parameterTypes" : [ "WarehouseDispatchRequest" ],
+    "access" : "private"
+  }, {
+    "name" : "buildRouteToken",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "String", "int", "double", "WarehouseDispatchRequest", "BillingContext" ],
+    "access" : "private"
+  } ],
+  "fields" : [ {
+    "name" : "primaryCarrier",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "secondaryCarrier",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "fallbackCarrier",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "maxRouteAttempts",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "maxWeightKg",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "maxDistanceKm",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "allowSplitShipment",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "enableColdChainLane",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "defaultHubCode",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "expressHubCode",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "standardSlaDays",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "expressSlaDays",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "fragileSurchargeRate",
+    "type" : "double",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String", "String", "int", "double", "int", "boolean", "boolean", "String", "String", "int", "int", "double" ],
+    "access" : "public"
+  } ]
+}

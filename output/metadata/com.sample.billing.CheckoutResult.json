@@ -1,0 +1,91 @@
+{
+  "fqn" : "com.sample.billing.CheckoutResult",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "PaymentStatus", "String" ],
+  "dependencyUsage" : {
+    "String" : 10,
+    "BigDecimal" : 4,
+    "PaymentStatus" : 3
+  },
+  "methods" : [ {
+    "name" : "getOrderId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getTransactionId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getTotalCharged",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isSuccess",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getPaymentStatus",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getWarehouseCode",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isFullySettled",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "normalizedTotalCharged",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "hasWarehouseAssignment",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "auditSummary",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "orderId",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "transactionId",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "totalCharged",
+    "type" : "BigDecimal",
+    "access" : "private"
+  }, {
+    "name" : "success",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "paymentStatus",
+    "type" : "PaymentStatus",
+    "access" : "private"
+  }, {
+    "name" : "warehouseCode",
+    "type" : "String",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String", "BigDecimal", "boolean", "PaymentStatus", "String" ],
+    "access" : "public"
+  } ]
+}

@@ -1,0 +1,122 @@
+{
+  "fqn" : "com.sample.fulfillment.FulfillmentCoordinator",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "AllocationResult", "AuditLogger", "BigDecimal", "BillingContext", "CommercialInvoiceDraft", "IllegalArgumentException", "InventoryStore", "NotificationSender", "OrderFulfillmentContext", "ProductCatalog", "ShippingPriority", "ShippingRateTable", "String", "TaxCalculator", "WarehouseAllocator" ],
+  "dependencyUsage" : {
+    "InventoryStore" : 2,
+    "ShippingRateTable" : 2,
+    "NotificationSender" : 2,
+    "AuditLogger" : 2,
+    "ProductCatalog" : 2,
+    "TaxCalculator" : 2,
+    "OrderFulfillmentContext" : 2,
+    "String" : 9,
+    "ShippingPriority" : 7,
+    "BigDecimal" : 11,
+    "IllegalArgumentException" : 2,
+    "BillingContext" : 5,
+    "WarehouseAllocator" : 2,
+    "AllocationResult" : 2,
+    "CommercialInvoiceDraft" : 3
+  },
+  "methods" : [ {
+    "name" : "estimateFulfillmentCost",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "ShippingPriority" ],
+    "access" : "public"
+  }, {
+    "name" : "scheduleShipment",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "int", "ShippingPriority" ],
+    "access" : "public"
+  }, {
+    "name" : "canSchedule",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "priorityForQuantity",
+    "returnType" : "ShippingPriority",
+    "parameterTypes" : [ "int" ],
+    "access" : "private"
+  }, {
+    "name" : "passesPriorityGate",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "ShippingPriority", "int" ],
+    "access" : "private"
+  }, {
+    "name" : "estimateWeight",
+    "returnType" : "double",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "private"
+  }, {
+    "name" : "helperWeight",
+    "returnType" : "double",
+    "parameterTypes" : [ "String" ],
+    "access" : "private"
+  }, {
+    "name" : "estimateDistance",
+    "returnType" : "int",
+    "parameterTypes" : [ "ShippingPriority" ],
+    "access" : "private"
+  }, {
+    "name" : "roundTotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "privateAudit",
+    "returnType" : "void",
+    "parameterTypes" : [ "String" ],
+    "access" : "private"
+  }, {
+    "name" : "logAllocation",
+    "returnType" : "void",
+    "parameterTypes" : [ "AllocationResult", "boolean" ],
+    "access" : "private"
+  }, {
+    "name" : "toBillingContext",
+    "returnType" : "BillingContext",
+    "parameterTypes" : [ "String", "int", "ShippingPriority" ],
+    "access" : "private"
+  }, {
+    "name" : "buildDraft",
+    "returnType" : "CommercialInvoiceDraft",
+    "parameterTypes" : [ "String", "int", "BillingContext", "ShippingPriority" ],
+    "access" : "private"
+  } ],
+  "fields" : [ {
+    "name" : "inventoryStore",
+    "type" : "InventoryStore",
+    "access" : "private"
+  }, {
+    "name" : "shippingRateTable",
+    "type" : "ShippingRateTable",
+    "access" : "private"
+  }, {
+    "name" : "notificationSender",
+    "type" : "NotificationSender",
+    "access" : "private"
+  }, {
+    "name" : "auditLogger",
+    "type" : "AuditLogger",
+    "access" : "private"
+  }, {
+    "name" : "productCatalog",
+    "type" : "ProductCatalog",
+    "access" : "private"
+  }, {
+    "name" : "taxCalculator",
+    "type" : "TaxCalculator",
+    "access" : "private"
+  }, {
+    "name" : "fulfillmentContext",
+    "type" : "OrderFulfillmentContext",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "InventoryStore", "ShippingRateTable", "NotificationSender", "AuditLogger", "ProductCatalog", "TaxCalculator", "OrderFulfillmentContext" ],
+    "access" : "public"
+  } ]
+}

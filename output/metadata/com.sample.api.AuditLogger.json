@@ -1,0 +1,62 @@
+{
+  "fqn" : "com.sample.api.AuditLogger",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "String" ],
+  "dependencyUsage" : {
+    "String" : 21
+  },
+  "methods" : [ {
+    "name" : "logEvent",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "logError",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "logSettlementAudit",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidCategory",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidDetail",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "logEventIfValid",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "logErrorTrimmed",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "logSettlementAuditIfValid",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "formatAuditLine",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "formatSettlementLine",
+    "returnType" : "String",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

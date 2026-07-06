@@ -1,0 +1,67 @@
+{
+  "fqn" : "com.sample.catalog.CatalogBrowseService",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "ArrayList", "BigDecimal", "BillingContext", "CommercialInvoiceDraft", "Customer", "CustomerAccountProfile", "FulfillmentCoordinator", "IllegalArgumentException", "IllegalStateException", "List", "Order", "OrderFulfillmentContext", "PricingService", "ProductCatalog", "String", "TaxCalculator" ],
+  "dependencyUsage" : {
+    "ProductCatalog" : 2,
+    "TaxCalculator" : 2,
+    "PricingService" : 2,
+    "String" : 7,
+    "List" : 2,
+    "ArrayList" : 1,
+    "Customer" : 4,
+    "BigDecimal" : 5,
+    "IllegalArgumentException" : 1,
+    "CustomerAccountProfile" : 3,
+    "CommercialInvoiceDraft" : 3,
+    "IllegalStateException" : 1,
+    "BillingContext" : 2,
+    "FulfillmentCoordinator" : 1,
+    "Order" : 3,
+    "OrderFulfillmentContext" : 2
+  },
+  "methods" : [ {
+    "name" : "listActiveSkus",
+    "returnType" : "List<String>",
+    "parameterTypes" : [ "String" ],
+    "access" : "public"
+  }, {
+    "name" : "quoteBrowsePrice",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "Customer" ],
+    "access" : "public"
+  }, {
+    "name" : "prepareInvoiceDraft",
+    "returnType" : "CommercialInvoiceDraft",
+    "parameterTypes" : [ "Customer", "CustomerAccountProfile", "String", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "checkout",
+    "returnType" : "Order",
+    "parameterTypes" : [ "Customer", "CustomerAccountProfile", "String", "int", "FulfillmentCoordinator" ],
+    "access" : "public"
+  }, {
+    "name" : "isEligibleForExpress",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "Customer", "CustomerAccountProfile" ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "productCatalog",
+    "type" : "ProductCatalog",
+    "access" : "private"
+  }, {
+    "name" : "taxCalculator",
+    "type" : "TaxCalculator",
+    "access" : "private"
+  }, {
+    "name" : "pricingService",
+    "type" : "PricingService",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "ProductCatalog", "TaxCalculator", "PricingService" ],
+    "access" : "public"
+  } ]
+}

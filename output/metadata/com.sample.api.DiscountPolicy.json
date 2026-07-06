@@ -1,0 +1,59 @@
+{
+  "fqn" : "com.sample.api.DiscountPolicy",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "BillingContext", "String" ],
+  "dependencyUsage" : {
+    "BigDecimal" : 16,
+    "BillingContext" : 3,
+    "String" : 5
+  },
+  "methods" : [ {
+    "name" : "applyDiscount",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext" ],
+    "access" : "package-private"
+  }, {
+    "name" : "applyTierDiscount",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isPromotionActive",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidSubtotal",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "applyDiscountIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext" ],
+    "access" : "package-private"
+  }, {
+    "name" : "applyTierDiscountIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isActivePromotion",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "discountSavings",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext" ],
+    "access" : "package-private"
+  }, {
+    "name" : "effectiveSubtotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

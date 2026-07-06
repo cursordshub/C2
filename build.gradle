@@ -19,25 +19,48 @@ repositories {
 }
 
 dependencies {
-    // Source AST + cross-module symbol resolution.
-    implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.26.2'
-    // Bytecode/binary scanning for compiled-only dependencies.
-    implementation 'org.ow2.asm:asm:9.7'
+    // Source AST only. Symbol-solver dropped for the lite build (see toolchainLite.md):
+    // without the target classpath resolve() mostly fails, so we read type names from the AST.
+    implementation 'com.github.javaparser:javaparser-core:3.26.2'
     // Structured JSON output keyed by FQN.
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
 
     testImplementation platform('org.junit:junit-bom:5.10.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Test-only: lets M2 tests real-compile a generated skeleton against Mockito on the classpath.
+    testImplementation 'org.mockito:mockito-core:5.12.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.12.0'
 }
 
 application {
-    mainClass = 'com.toolchain.metadata.cli.MetadataCli'
+    // Default `gradlew run` = M1 metadata extraction.
+    mainClass = 'com.toolchain.metadata.Cli'
+}
+
+// `gradlew testgen` = M2 test-infra generation (consumes M1 JSON from output/metadata).
+tasks.register('testgen', JavaExec) {
+    group = 'application'
+    description = 'M2: generate JUnit5/Mockito test skeletons from M1 metadata.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.toolchain.testgen.Cli'
+}
+
+tasks.register('promptgen', JavaExec) {
+    group = 'application'
+    description = 'M3: generate LLM coverage prompts from M1 metadata, M2 skeletons, and JaCoCo/PIT gaps.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.toolchain.promptgen.Cli'
+    dependsOn test, jacocoTestReport
 }
 
 test {
     useJUnitPlatform()
     finalizedBy jacocoTestReport
+    doFirst {
+        file("${layout.buildDirectory.get()}/test-runtime-classpath.txt").text = classpath.asPath
+    }
 }
 
 jacocoTestReport {
@@ -50,6 +73,6 @@ jacocoTestReport {
 
 pitest {
     junit5PluginVersion = '1.2.1'
-    targetClasses = ['com.toolchain.metadata.*']
+    targetClasses = ['com.toolchain.*']
     outputFormats = ['XML', 'HTML']
 }

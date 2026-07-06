@@ -1,0 +1,99 @@
+{
+  "fqn" : "com.sample.billing.CheckoutService",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "AuditLogger", "BigDecimal", "BillingContext", "CheckoutResult", "InventoryStore", "LegacyAccount", "NotificationSender", "PaymentGateway", "PricingEngine", "ShippingPriority", "ShippingRateTable", "String", "TaxCalculator", "WarehouseAllocator" ],
+  "dependencyUsage" : {
+    "TaxCalculator" : 2,
+    "InventoryStore" : 2,
+    "PaymentGateway" : 2,
+    "NotificationSender" : 2,
+    "AuditLogger" : 2,
+    "ShippingRateTable" : 2,
+    "PricingEngine" : 2,
+    "BillingContext" : 2,
+    "LegacyAccount" : 2,
+    "ShippingPriority" : 2,
+    "BigDecimal" : 18,
+    "String" : 6,
+    "CheckoutResult" : 4,
+    "WarehouseAllocator" : 2
+  },
+  "methods" : [ {
+    "name" : "calculateShippingFee",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "double", "int", "ShippingPriority" ],
+    "access" : "public"
+  }, {
+    "name" : "completeCheckout",
+    "returnType" : "CheckoutResult",
+    "parameterTypes" : [ "String", "int", "double", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "previewOrderTotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int", "double", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "canProceedWithExpressCheckout",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "estimateDutyForSku",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "public"
+  }, {
+    "name" : "isRegionSupported",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "resolvePriority",
+    "returnType" : "ShippingPriority",
+    "parameterTypes" : [ ],
+    "access" : "private"
+  } ],
+  "fields" : [ {
+    "name" : "taxCalculator",
+    "type" : "TaxCalculator",
+    "access" : "private"
+  }, {
+    "name" : "inventoryStore",
+    "type" : "InventoryStore",
+    "access" : "private"
+  }, {
+    "name" : "paymentGateway",
+    "type" : "PaymentGateway",
+    "access" : "private"
+  }, {
+    "name" : "notificationSender",
+    "type" : "NotificationSender",
+    "access" : "private"
+  }, {
+    "name" : "auditLogger",
+    "type" : "AuditLogger",
+    "access" : "private"
+  }, {
+    "name" : "shippingRateTable",
+    "type" : "ShippingRateTable",
+    "access" : "private"
+  }, {
+    "name" : "pricingEngine",
+    "type" : "PricingEngine",
+    "access" : "private"
+  }, {
+    "name" : "billingContext",
+    "type" : "BillingContext",
+    "access" : "private"
+  }, {
+    "name" : "legacyAccount",
+    "type" : "LegacyAccount",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "TaxCalculator", "InventoryStore", "PaymentGateway", "NotificationSender", "AuditLogger", "ShippingRateTable", "PricingEngine", "BillingContext", "LegacyAccount" ],
+    "access" : "public"
+  } ]
+}

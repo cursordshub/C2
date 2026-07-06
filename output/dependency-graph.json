@@ -1,0 +1,324 @@
+{
+  "nodes" : [ "com.sample.api.AuditLogger", "com.sample.api.CurrencyConverter", "com.sample.api.DiscountPolicy", "com.sample.api.IdGenerator", "com.sample.api.InventoryStore", "com.sample.api.LegacyAccount", "com.sample.api.NotificationSender", "com.sample.api.OrderRepository", "com.sample.api.PaymentGateway", "com.sample.api.PaymentStatus", "com.sample.api.ProductCatalog", "com.sample.api.ShippingPriority", "com.sample.api.ShippingRateTable", "com.sample.api.TaxCalculator", "com.sample.billing.BillingContext", "com.sample.billing.CheckoutResult", "com.sample.billing.CheckoutService", "com.sample.billing.CommercialInvoiceDraft", "com.sample.billing.PaymentSettlementEngine", "com.sample.billing.PricingEngine", "com.sample.billing.PricingEngine.AbstractPricingRule", "com.sample.billing.PricingEngine.PremiumPricingRule", "com.sample.billing.PricingEngine.StandardPricingRule", "com.sample.catalog.CatalogBrowseService", "com.sample.catalog.Customer", "com.sample.catalog.CustomerAccountProfile", "com.sample.catalog.Order", "com.sample.catalog.PaymentStatus", "com.sample.catalog.PricingService", "com.sample.fulfillment.AllocationResult", "com.sample.fulfillment.FulfillmentCoordinator", "com.sample.fulfillment.OrderFulfillmentContext", "com.sample.fulfillment.ShipmentRoutingEngine", "com.sample.fulfillment.WarehouseAllocator", "com.sample.fulfillment.WarehouseDispatchRequest" ],
+  "edges" : [ {
+    "from" : "com.sample.api.DiscountPolicy",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.api.OrderRepository",
+    "to" : "com.sample.billing.CommercialInvoiceDraft"
+  }, {
+    "from" : "com.sample.api.OrderRepository",
+    "to" : "com.sample.catalog.Order"
+  }, {
+    "from" : "com.sample.api.OrderRepository",
+    "to" : "com.sample.fulfillment.OrderFulfillmentContext"
+  }, {
+    "from" : "com.sample.api.ShippingRateTable",
+    "to" : "com.sample.api.ShippingPriority"
+  }, {
+    "from" : "com.sample.api.TaxCalculator",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.AuditLogger"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.billing.CheckoutResult"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.InventoryStore"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.LegacyAccount"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.NotificationSender"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.PaymentGateway"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.billing.PricingEngine"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.ShippingPriority"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.ShippingRateTable"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.api.TaxCalculator"
+  }, {
+    "from" : "com.sample.billing.CheckoutService",
+    "to" : "com.sample.fulfillment.WarehouseAllocator"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.AuditLogger"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.billing.CheckoutResult"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.billing.CommercialInvoiceDraft"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.CurrencyConverter"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.catalog.CustomerAccountProfile"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.DiscountPolicy"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.InventoryStore"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.NotificationSender"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.fulfillment.OrderFulfillmentContext"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.OrderRepository"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.PaymentGateway"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.ProductCatalog"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.ShippingPriority"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.ShippingRateTable"
+  }, {
+    "from" : "com.sample.billing.PaymentSettlementEngine",
+    "to" : "com.sample.api.TaxCalculator"
+  }, {
+    "from" : "com.sample.billing.PricingEngine",
+    "to" : "com.sample.billing.PricingEngine.AbstractPricingRule"
+  }, {
+    "from" : "com.sample.billing.PricingEngine",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.billing.PricingEngine",
+    "to" : "com.sample.api.CurrencyConverter"
+  }, {
+    "from" : "com.sample.billing.PricingEngine",
+    "to" : "com.sample.api.DiscountPolicy"
+  }, {
+    "from" : "com.sample.billing.PricingEngine",
+    "to" : "com.sample.billing.PricingEngine.PremiumPricingRule"
+  }, {
+    "from" : "com.sample.billing.PricingEngine",
+    "to" : "com.sample.api.ProductCatalog"
+  }, {
+    "from" : "com.sample.billing.PricingEngine",
+    "to" : "com.sample.billing.PricingEngine.StandardPricingRule"
+  }, {
+    "from" : "com.sample.billing.PricingEngine.AbstractPricingRule",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.billing.PricingEngine.PremiumPricingRule",
+    "to" : "com.sample.billing.PricingEngine.AbstractPricingRule"
+  }, {
+    "from" : "com.sample.billing.PricingEngine.PremiumPricingRule",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.billing.PricingEngine.StandardPricingRule",
+    "to" : "com.sample.billing.PricingEngine.AbstractPricingRule"
+  }, {
+    "from" : "com.sample.billing.PricingEngine.StandardPricingRule",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.billing.CommercialInvoiceDraft"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.catalog.Customer"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.catalog.CustomerAccountProfile"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.fulfillment.FulfillmentCoordinator"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.catalog.Order"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.fulfillment.OrderFulfillmentContext"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.catalog.PricingService"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.api.ProductCatalog"
+  }, {
+    "from" : "com.sample.catalog.CatalogBrowseService",
+    "to" : "com.sample.api.TaxCalculator"
+  }, {
+    "from" : "com.sample.catalog.Order",
+    "to" : "com.sample.billing.CommercialInvoiceDraft"
+  }, {
+    "from" : "com.sample.catalog.Order",
+    "to" : "com.sample.catalog.Customer"
+  }, {
+    "from" : "com.sample.catalog.Order",
+    "to" : "com.sample.api.OrderRepository"
+  }, {
+    "from" : "com.sample.catalog.Order",
+    "to" : "com.sample.catalog.PricingService"
+  }, {
+    "from" : "com.sample.catalog.PricingService",
+    "to" : "com.sample.catalog.Customer"
+  }, {
+    "from" : "com.sample.fulfillment.AllocationResult",
+    "to" : "com.sample.api.ShippingPriority"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.fulfillment.AllocationResult"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.api.AuditLogger"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.billing.CommercialInvoiceDraft"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.api.InventoryStore"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.api.NotificationSender"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.fulfillment.OrderFulfillmentContext"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.api.ProductCatalog"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.api.ShippingPriority"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.api.ShippingRateTable"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.api.TaxCalculator"
+  }, {
+    "from" : "com.sample.fulfillment.FulfillmentCoordinator",
+    "to" : "com.sample.fulfillment.WarehouseAllocator"
+  }, {
+    "from" : "com.sample.fulfillment.OrderFulfillmentContext",
+    "to" : "com.sample.api.ShippingPriority"
+  }, {
+    "from" : "com.sample.fulfillment.ShipmentRoutingEngine",
+    "to" : "com.sample.billing.BillingContext"
+  }, {
+    "from" : "com.sample.fulfillment.ShipmentRoutingEngine",
+    "to" : "com.sample.fulfillment.OrderFulfillmentContext"
+  }, {
+    "from" : "com.sample.fulfillment.ShipmentRoutingEngine",
+    "to" : "com.sample.fulfillment.WarehouseDispatchRequest"
+  }, {
+    "from" : "com.sample.fulfillment.WarehouseAllocator",
+    "to" : "com.sample.fulfillment.AllocationResult"
+  }, {
+    "from" : "com.sample.fulfillment.WarehouseAllocator",
+    "to" : "com.sample.api.ShippingPriority"
+  }, {
+    "from" : "com.sample.fulfillment.WarehouseAllocator",
+    "to" : "com.sample.fulfillment.WarehouseDispatchRequest"
+  }, {
+    "from" : "com.sample.fulfillment.WarehouseDispatchRequest",
+    "to" : "com.sample.api.ShippingPriority"
+  } ],
+  "outDegree" : {
+    "com.sample.api.AuditLogger" : 0,
+    "com.sample.api.CurrencyConverter" : 0,
+    "com.sample.api.DiscountPolicy" : 1,
+    "com.sample.api.IdGenerator" : 0,
+    "com.sample.api.InventoryStore" : 0,
+    "com.sample.api.LegacyAccount" : 0,
+    "com.sample.api.NotificationSender" : 0,
+    "com.sample.api.OrderRepository" : 3,
+    "com.sample.api.PaymentGateway" : 0,
+    "com.sample.api.PaymentStatus" : 0,
+    "com.sample.api.ProductCatalog" : 0,
+    "com.sample.api.ShippingPriority" : 0,
+    "com.sample.api.ShippingRateTable" : 1,
+    "com.sample.api.TaxCalculator" : 1,
+    "com.sample.billing.BillingContext" : 0,
+    "com.sample.billing.CheckoutResult" : 0,
+    "com.sample.billing.CheckoutService" : 12,
+    "com.sample.billing.CommercialInvoiceDraft" : 0,
+    "com.sample.billing.PaymentSettlementEngine" : 16,
+    "com.sample.billing.PricingEngine" : 7,
+    "com.sample.billing.PricingEngine.AbstractPricingRule" : 1,
+    "com.sample.billing.PricingEngine.PremiumPricingRule" : 2,
+    "com.sample.billing.PricingEngine.StandardPricingRule" : 2,
+    "com.sample.catalog.CatalogBrowseService" : 10,
+    "com.sample.catalog.Customer" : 0,
+    "com.sample.catalog.CustomerAccountProfile" : 0,
+    "com.sample.catalog.Order" : 4,
+    "com.sample.catalog.PaymentStatus" : 0,
+    "com.sample.catalog.PricingService" : 1,
+    "com.sample.fulfillment.AllocationResult" : 1,
+    "com.sample.fulfillment.FulfillmentCoordinator" : 12,
+    "com.sample.fulfillment.OrderFulfillmentContext" : 1,
+    "com.sample.fulfillment.ShipmentRoutingEngine" : 3,
+    "com.sample.fulfillment.WarehouseAllocator" : 3,
+    "com.sample.fulfillment.WarehouseDispatchRequest" : 1
+  },
+  "inDegree" : {
+    "com.sample.api.AuditLogger" : 3,
+    "com.sample.api.CurrencyConverter" : 2,
+    "com.sample.api.DiscountPolicy" : 2,
+    "com.sample.api.IdGenerator" : 0,
+    "com.sample.api.InventoryStore" : 3,
+    "com.sample.api.LegacyAccount" : 1,
+    "com.sample.api.NotificationSender" : 3,
+    "com.sample.api.OrderRepository" : 2,
+    "com.sample.api.PaymentGateway" : 2,
+    "com.sample.api.PaymentStatus" : 0,
+    "com.sample.api.ProductCatalog" : 4,
+    "com.sample.api.ShippingPriority" : 8,
+    "com.sample.api.ShippingRateTable" : 3,
+    "com.sample.api.TaxCalculator" : 4,
+    "com.sample.billing.BillingContext" : 11,
+    "com.sample.billing.CheckoutResult" : 2,
+    "com.sample.billing.CheckoutService" : 0,
+    "com.sample.billing.CommercialInvoiceDraft" : 5,
+    "com.sample.billing.PaymentSettlementEngine" : 0,
+    "com.sample.billing.PricingEngine" : 1,
+    "com.sample.billing.PricingEngine.AbstractPricingRule" : 3,
+    "com.sample.billing.PricingEngine.PremiumPricingRule" : 1,
+    "com.sample.billing.PricingEngine.StandardPricingRule" : 1,
+    "com.sample.catalog.CatalogBrowseService" : 0,
+    "com.sample.catalog.Customer" : 3,
+    "com.sample.catalog.CustomerAccountProfile" : 2,
+    "com.sample.catalog.Order" : 2,
+    "com.sample.catalog.PaymentStatus" : 0,
+    "com.sample.catalog.PricingService" : 2,
+    "com.sample.fulfillment.AllocationResult" : 2,
+    "com.sample.fulfillment.FulfillmentCoordinator" : 1,
+    "com.sample.fulfillment.OrderFulfillmentContext" : 5,
+    "com.sample.fulfillment.ShipmentRoutingEngine" : 0,
+    "com.sample.fulfillment.WarehouseAllocator" : 2,
+    "com.sample.fulfillment.WarehouseDispatchRequest" : 2
+  }
+}

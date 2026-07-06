@@ -1,0 +1,259 @@
+{
+  "fqn" : "com.sample.billing.PaymentSettlementEngine",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "ArrayList", "AuditLogger", "BigDecimal", "BillingContext", "CheckoutResult", "CommercialInvoiceDraft", "CurrencyConverter", "CustomerAccountProfile", "DiscountPolicy", "IllegalArgumentException", "InventoryStore", "List", "NotificationSender", "OrderFulfillmentContext", "OrderRepository", "PaymentGateway", "PaymentStatus", "ProductCatalog", "ShippingPriority", "ShippingRateTable", "String", "TaxCalculator" ],
+  "dependencyUsage" : {
+    "TaxCalculator" : 2,
+    "InventoryStore" : 2,
+    "PaymentGateway" : 2,
+    "NotificationSender" : 2,
+    "AuditLogger" : 2,
+    "ShippingRateTable" : 2,
+    "ProductCatalog" : 2,
+    "CurrencyConverter" : 2,
+    "DiscountPolicy" : 2,
+    "OrderRepository" : 2,
+    "BillingContext" : 4,
+    "CommercialInvoiceDraft" : 6,
+    "BigDecimal" : 85,
+    "String" : 23,
+    "PaymentStatus" : 9,
+    "List" : 3,
+    "ArrayList" : 1,
+    "CustomerAccountProfile" : 1,
+    "OrderFulfillmentContext" : 1,
+    "ShippingPriority" : 2,
+    "CheckoutResult" : 5,
+    "IllegalArgumentException" : 1
+  },
+  "methods" : [ {
+    "name" : "settleInvoice",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ "String", "BigDecimal", "PaymentStatus" ],
+    "access" : "public"
+  }, {
+    "name" : "reconcileBatch",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "List<String>" ],
+    "access" : "public"
+  }, {
+    "name" : "computeTotalSettlement",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BillingContext", "CommercialInvoiceDraft" ],
+    "access" : "public"
+  }, {
+    "name" : "processPartialPayment",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ "String", "BigDecimal", "CustomerAccountProfile" ],
+    "access" : "public"
+  }, {
+    "name" : "finalizeExpressSettlement",
+    "returnType" : "CheckoutResult",
+    "parameterTypes" : [ "OrderFulfillmentContext", "ShippingPriority" ],
+    "access" : "public"
+  }, {
+    "name" : "voidStaleSettlements",
+    "returnType" : "int",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "public"
+  }, {
+    "name" : "getLastSettlementReference",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "getSettlementCounter",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "normalizeAmount",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "requirePositive",
+    "returnType" : "void",
+    "parameterTypes" : [ "BigDecimal", "String" ],
+    "access" : "private"
+  }, {
+    "name" : "mergeStatus",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ "PaymentStatus", "PaymentStatus" ],
+    "access" : "private"
+  }, {
+    "name" : "computeBufferedFee",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "exceedsThreshold",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "refreshActiveCodesFromDraft",
+    "returnType" : "void",
+    "parameterTypes" : [ ],
+    "access" : "private"
+  }, {
+    "name" : "computeRetryBudget",
+    "returnType" : "int",
+    "parameterTypes" : [ "int" ],
+    "access" : "private"
+  }, {
+    "name" : "applyOvernightPremium",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "ShippingPriority" ],
+    "access" : "private"
+  }, {
+    "name" : "logSettlementSnapshot",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "clampToMinimum",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "inventoryReadyForSettlement",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "private"
+  }, {
+    "name" : "resolveCatalogAmount",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "int" ],
+    "access" : "private"
+  }, {
+    "name" : "notifyIfAboveThreshold",
+    "returnType" : "void",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "safeCapture",
+    "returnType" : "PaymentStatus",
+    "parameterTypes" : [ "String", "BigDecimal" ],
+    "access" : "private"
+  }, {
+    "name" : "buildInvoiceTotal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "CommercialInvoiceDraft", "BillingContext" ],
+    "access" : "private"
+  } ],
+  "fields" : [ {
+    "name" : "taxCalculator",
+    "type" : "TaxCalculator",
+    "access" : "private"
+  }, {
+    "name" : "inventoryStore",
+    "type" : "InventoryStore",
+    "access" : "private"
+  }, {
+    "name" : "paymentGateway",
+    "type" : "PaymentGateway",
+    "access" : "private"
+  }, {
+    "name" : "notificationSender",
+    "type" : "NotificationSender",
+    "access" : "private"
+  }, {
+    "name" : "auditLogger",
+    "type" : "AuditLogger",
+    "access" : "private"
+  }, {
+    "name" : "shippingRateTable",
+    "type" : "ShippingRateTable",
+    "access" : "private"
+  }, {
+    "name" : "productCatalog",
+    "type" : "ProductCatalog",
+    "access" : "private"
+  }, {
+    "name" : "currencyConverter",
+    "type" : "CurrencyConverter",
+    "access" : "private"
+  }, {
+    "name" : "discountPolicy",
+    "type" : "DiscountPolicy",
+    "access" : "private"
+  }, {
+    "name" : "orderRepository",
+    "type" : "OrderRepository",
+    "access" : "private"
+  }, {
+    "name" : "billingContext",
+    "type" : "BillingContext",
+    "access" : "private"
+  }, {
+    "name" : "invoiceDraft",
+    "type" : "CommercialInvoiceDraft",
+    "access" : "private"
+  }, {
+    "name" : "settlementThreshold",
+    "type" : "BigDecimal",
+    "access" : "private"
+  }, {
+    "name" : "maxRetryAttempts",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "processingFeeRate",
+    "type" : "BigDecimal",
+    "access" : "private"
+  }, {
+    "name" : "taxBufferPercent",
+    "type" : "BigDecimal",
+    "access" : "private"
+  }, {
+    "name" : "lastSettlementReference",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "settlementCounter",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "overnightSettlementEnabled",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "creditCheckRequired",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "auditTrailEnabled",
+    "type" : "boolean",
+    "access" : "private"
+  }, {
+    "name" : "activeRegionCode",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "activeCurrencyCode",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "minimumCharge",
+    "type" : "BigDecimal",
+    "access" : "private"
+  }, {
+    "name" : "discountCap",
+    "type" : "BigDecimal",
+    "access" : "private"
+  }, {
+    "name" : "shippingWeightKg",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "allocationPriority",
+    "type" : "int",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "TaxCalculator", "InventoryStore", "PaymentGateway", "NotificationSender", "AuditLogger", "ShippingRateTable", "ProductCatalog", "CurrencyConverter", "DiscountPolicy", "OrderRepository", "BillingContext", "CommercialInvoiceDraft" ],
+    "access" : "public"
+  } ]
+}

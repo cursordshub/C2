@@ -1,0 +1,104 @@
+{
+  "fqn" : "com.sample.fulfillment.WarehouseDispatchRequest",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "ShippingPriority", "String" ],
+  "dependencyUsage" : {
+    "String" : 10,
+    "ShippingPriority" : 3
+  },
+  "methods" : [ {
+    "name" : "sku",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "quantity",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "priority",
+    "returnType" : "ShippingPriority",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "warehouseId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "destinationRegion",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "weightKg",
+    "returnType" : "double",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "fragile",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidForDispatch",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "requiresFragileHandling",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "isExpedited",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "totalWeightKg",
+    "returnType" : "double",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  }, {
+    "name" : "routingKey",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ {
+    "name" : "sku",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "quantity",
+    "type" : "int",
+    "access" : "private"
+  }, {
+    "name" : "priority",
+    "type" : "ShippingPriority",
+    "access" : "private"
+  }, {
+    "name" : "warehouseId",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "destinationRegion",
+    "type" : "String",
+    "access" : "private"
+  }, {
+    "name" : "weightKg",
+    "type" : "double",
+    "access" : "private"
+  }, {
+    "name" : "fragile",
+    "type" : "boolean",
+    "access" : "private"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "int", "ShippingPriority", "String", "String", "double", "boolean" ],
+    "access" : "public"
+  } ]
+}

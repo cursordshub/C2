@@ -1,0 +1,139 @@
+{
+  "fqn" : "com.sample.fulfillment.OrderFulfillmentContext",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "ShippingPriority", "String" ],
+  "dependencyUsage" : {
+    "String" : 18,
+    "ShippingPriority" : 1
+  },
+  "methods" : [ {
+    "name" : "orderId",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "destinationRegion",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "lineCount",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "totalWeightKg",
+    "returnType" : "double",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "priority",
+    "returnType" : "ShippingPriority",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "fragileItems",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "isPremiumChannel",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "regionCode",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "taxExempt",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "channel",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "allowsQuantity",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "int" ],
+    "access" : "public"
+  }, {
+    "name" : "loyaltyTier",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "fulfillmentNotes",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "signatureRequired",
+    "returnType" : "boolean",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "carrierPreference",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "regionCode",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "currencyCode",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "loyaltyTier",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "maxQuantity",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "taxExempt",
+    "type" : "boolean",
+    "access" : "public"
+  }, {
+    "name" : "channel",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "warehouseCode",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "coldChainRequired",
+    "type" : "boolean",
+    "access" : "public"
+  }, {
+    "name" : "allocationPriority",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "carrierPreference",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "premiumChannel",
+    "type" : "boolean",
+    "access" : "public"
+  }, {
+    "name" : "fulfillmentNotes",
+    "type" : "String",
+    "access" : "public"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String", "int", "int", "boolean", "String", "String", "boolean", "int", "String", "boolean", "String" ],
+    "access" : "public"
+  } ]
+}

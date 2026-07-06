@@ -1,0 +1,75 @@
+{
+  "fqn" : "com.sample.catalog.CustomerAccountProfile",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "LocalDate", "String" ],
+  "dependencyUsage" : {
+    "String" : 7,
+    "BigDecimal" : 2,
+    "LocalDate" : 2
+  },
+  "methods" : [ {
+    "name" : "computeRiskScore",
+    "returnType" : "int",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  }, {
+    "name" : "segment",
+    "returnType" : "String",
+    "parameterTypes" : [ ],
+    "access" : "public"
+  } ],
+  "fields" : [ {
+    "name" : "customerId",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "tierCode",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "homeRegion",
+    "type" : "String",
+    "access" : "public"
+  }, {
+    "name" : "lifetimeSpend",
+    "type" : "BigDecimal",
+    "access" : "public"
+  }, {
+    "name" : "taxExempt",
+    "type" : "boolean",
+    "access" : "public"
+  }, {
+    "name" : "loyaltyPoints",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "chargebackCount",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "daysSinceLastLogin",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "emailVerified",
+    "type" : "boolean",
+    "access" : "public"
+  }, {
+    "name" : "phoneVerified",
+    "type" : "boolean",
+    "access" : "public"
+  }, {
+    "name" : "supportTickets",
+    "type" : "int",
+    "access" : "public"
+  }, {
+    "name" : "accountOpened",
+    "type" : "LocalDate",
+    "access" : "public"
+  } ],
+  "constructors" : [ {
+    "parameterTypes" : [ "String", "String", "String", "BigDecimal", "boolean", "int", "int", "int", "boolean", "boolean", "int", "LocalDate" ],
+    "access" : "public"
+  } ]
+}

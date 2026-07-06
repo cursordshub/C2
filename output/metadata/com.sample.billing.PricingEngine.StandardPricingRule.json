@@ -1,0 +1,19 @@
+{
+  "fqn" : "com.sample.billing.PricingEngine.StandardPricingRule",
+  "classType" : "CLASS",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "AbstractPricingRule", "BigDecimal", "BillingContext" ],
+  "dependencyUsage" : {
+    "BigDecimal" : 2,
+    "BillingContext" : 1,
+    "AbstractPricingRule" : 1
+  },
+  "methods" : [ {
+    "name" : "adjust",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "BillingContext" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}

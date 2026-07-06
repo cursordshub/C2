@@ -1,0 +1,58 @@
+{
+  "fqn" : "com.sample.api.CurrencyConverter",
+  "classType" : "INTERFACE",
+  "hasStaticInitializer" : false,
+  "dependencies" : [ "BigDecimal", "String" ],
+  "dependencyUsage" : {
+    "BigDecimal" : 13,
+    "String" : 9
+  },
+  "methods" : [ {
+    "name" : "convertToLocal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "convertFromLocal",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "currentExchangeRate",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidCurrency",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "isValidAmount",
+    "returnType" : "boolean",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "package-private"
+  }, {
+    "name" : "convertToLocalIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "convertFromLocalIfValid",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "safeExchangeRate",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "String", "String" ],
+    "access" : "package-private"
+  }, {
+    "name" : "roundForBilling",
+    "returnType" : "BigDecimal",
+    "parameterTypes" : [ "BigDecimal" ],
+    "access" : "package-private"
+  } ],
+  "fields" : [ ],
+  "constructors" : [ ]
+}
